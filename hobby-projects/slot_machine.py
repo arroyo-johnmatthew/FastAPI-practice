@@ -14,7 +14,7 @@ def slot_prizes(spin, bet):
             return bet * 5
         elif spin[0] == "🍌":
             return bet * 10
-        elif spin[0] == "🍎":
+        else:
             return bet * 15
     return 0
 
@@ -60,5 +60,5 @@ def main():
         # Print the overall result 
         print("".join(spin))
         print("You won", prize)
-        
+        print("")
 main()
