@@ -20,5 +20,4 @@ while True:
             break
         else:
             print("You survived the shot 😰")
-            print(f"bullets remaining: {len(chamber)}\n")
             continue
