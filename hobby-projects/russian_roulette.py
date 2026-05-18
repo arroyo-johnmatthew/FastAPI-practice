@@ -13,6 +13,12 @@ while True:
         break
 
     elif choice in ["yes", "y"]:
+
+        # checks if the gun that will be fired contains 1 bullet left 
+        if gun == 1:
+            print("You just killed yourself!")
+            break
+
         result = random.choice(trigger)
 
         # checks if there are still bullets inside the gun
