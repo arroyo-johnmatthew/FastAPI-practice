@@ -1,4 +1,8 @@
 import random
+import time
+import pygame
+
+pygame.mixer.init()
 
 # one live bullet in a gun
 chamber = [0, 0, 0, 0, 0, 1]
