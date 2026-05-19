@@ -17,7 +17,12 @@ while True:
 
     elif choice in ["yes", "y"]:
         # spins the chamber before getting a bullet
+        pygame.mixer.music.load('hobby-projects/russian_roulette/gun_spins.mp3')
+        pygame.mixer.music.play()
         shot = random.choice(chamber)
+
+        # wait for a few seconds before firing the gun
+        time.sleep(1)
 
         if shot == 1:
             # plays a sound effect of a gun firing
@@ -25,7 +30,13 @@ while True:
             pygame.mixer.music.play()
 
             print("💀 You are Dead 💀\n")
-            continue
+            # wait for 1 second before ending the program to make sure the sound is heard
+            time.sleep(1)
+            break
+
         else:
+            pygame.mixer.music.load('hobby-projects/russian_roulette/gun_clicks.mp3')
+            pygame.mixer.music.play()
+            
             print("You survived the shot 😰\n")
             continue
